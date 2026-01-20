@@ -6,6 +6,11 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
+body,
+html {
+    overflow-x: hidden;  /* prevent horizontal scroll */
+    overflow-y: auto;    /* allow vertical scroll */
+}
 
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
@@ -28,6 +33,8 @@ section, summary, time, mark, audio, video {
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;}
+	/* GLOBAL SCROLL SETTINGS */
+
 
 body {
 	line-height: 1;
@@ -3453,7 +3460,7 @@ input, select, textarea {
 
 			#intro {
 				padding: 4rem 4rem 2rem 4rem ;
-				min-height: 90vh;
+				min-height: auto;
 			}
 
 				#intro p br {
@@ -3461,7 +3468,7 @@ input, select, textarea {
 				}
 
 				#intro + #header {
-					margin-top: -14rem;
+					margin-top: 0;
 				}
 
 		}
@@ -3469,23 +3476,23 @@ input, select, textarea {
 		@media screen and (max-width: 736px) {
 
 			#intro {
-				padding: 3rem 2rem 1rem 2rem ;
-				min-height: 80vh;
+				padding:  2rem 1rem  ;
+				min-height: auto;
 			}
 
 				#intro h1 {
-					font-size: 3.25rem;
-					line-height: 1.1;
-					margin-bottom: 1rem;
+					font-size: 2.2rem;
+					line-height: 1.2;
+					
 				}
 
 				#intro p {
 					font-size: 1rem;
-					margin-top: 0rem;
+					
 				}
 
 				#intro .actions {
-					display: none;
+					display: block;
 				}
 
 		}
@@ -4343,6 +4350,49 @@ input, select, textarea {
 		}
 
 		@media screen and (max-width: 736px) {
+			@media screen and (max-width: 736px) {
+
+  /* Make all sections flexible height */
+  #intro,
+  #main,
+  section,
+  #header,
+  footer {
+      min-height: auto !important;
+      height: auto !important;
+      padding-top: 1rem !important;
+      padding-bottom: 1rem !important;
+  }
+
+}
+@media screen and (max-width: 736px) {
+
+  /* Images stack and scale */
+  .image.left,
+  .image.right,
+  .image.fit,
+  .image.main {
+      float: none !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      margin: 1rem 0 !important;
+      display: block;
+  }
+
+  /* Posts stack vertically */
+  #main > .posts > * {
+      width: 100% !important;
+      padding: 1rem !important;
+      box-sizing: border-box;
+  }
+
+  /* Remove borders on mobile */
+  #main > .posts > article {
+      border-left: none !important;
+      border-top: none !important;
+  }
+
+}
 
 			#footer > section {
 				padding: 2rem 2rem 0.1rem 2rem ;
@@ -4698,4 +4748,256 @@ input, select, textarea {
     0% { box-shadow: 0 0 5px rgba(255, 122, 24, 0.6); }
     50% { box-shadow: 0 0 20px rgba(255, 122, 24, 1); }
     100% { box-shadow: 0 0 5px rgba(255, 122, 24, 0.6); }
+}
+/* MOBILE-FRIENDLY FIXES */
+@media screen and (max-width: 736px) {
+
+  /* Intro Section */
+  #intro {
+    padding: 2rem 1rem;
+    min-height: auto;
+  }
+
+  #intro h1 {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+
+  #intro p {
+    font-size: 1rem;
+  }
+
+  #intro .actions {
+    display: block;
+  }
+
+  /* Images stack vertically */
+  .image.left,
+  .image.right {
+    float: none;
+    max-width: 100%;
+    margin: 1.5rem 0;
+    top: 0;
+  }
+
+  .image.left img,
+  .image.right img,
+  .image.fit img,
+  .image.main img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* Posts Section */
+  #main > .posts > * {
+    width: 100% !important;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+
+  #main > .posts > article {
+    border-left: none !important;
+    border-top: none !important;
+  }
+
+  /* Main container padding */
+  #main > * {
+    padding: 1rem 1rem 0.5rem 1rem;
+  }
+
+  /* Prevent horizontal scroll for all text/images */
+  * {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+}
+/* MOBILE-FRIENDLY FIXES */
+@media screen and (max-width: 736px) {
+
+  /* Intro Section */
+  #intro {
+    padding: 2rem 1rem;
+    min-height: auto;
+  }
+
+  #intro h1 {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+
+  #intro p {
+    font-size: 1rem;
+  }
+
+  #intro .actions {
+    display: block;
+  }
+
+  /* Images stack vertically */
+  .image.left,
+  .image.right {
+    float: none;
+    max-width: 100%;
+    margin: 1.5rem 0;
+    top: 0;
+  }
+
+  .image.left img,
+  .image.right img,
+  .image.fit img,
+  .image.main img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* Posts Section stacked */
+  #main > .posts > * {
+    width: 100% !important;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+
+  #main > .posts > article {
+    border-left: none !important;
+    border-top: none !important;
+  }
+
+  /* Main container padding */
+  #main > * {
+    padding: 1rem 1rem 0.5rem 1rem;
+  }
+
+  /* Force all text to wrap */
+  * {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  /* Remove fixed heights */
+  #intro,
+  #main,
+  section,
+  #header {
+    min-height: auto !important;
+    height: auto !important;
+  }
+
+  /* Buttons & actions full width */
+  #intro .actions,
+  button {
+    display: block;
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+
+}
+/* ==============================
+   MOBILE-FRIENDLY STYLES
+   Applies only to screens ≤736px
+   ============================== */
+@media screen and (max-width: 736px) {
+	
+
+    /* Allow scrolling and prevent horizontal scroll */
+    html, body {
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+    /* Intro section adjustments */
+    #intro {
+        padding: 2rem 1rem !important;
+        min-height: auto !important;
+        height: auto !important;
+    }
+
+    #intro h1 {
+        font-size: 2rem !important;
+        line-height: 1.2 !important;
+    }
+
+    #intro p {
+        font-size: 1rem !important;
+    }
+
+    #intro .actions,
+    button {
+        display: block !important;
+        width: 100% !important;
+        margin: 0.5rem 0 !important;
+    }
+
+    /* Images stack and scale */
+    .image.left,
+    .image.right,
+    .image.fit,
+    .image.main {
+        float: none !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 1rem 0 !important;
+        display: block !important;
+    }
+
+    /* Posts section stacked vertically */
+    #main > .posts > * {
+        width: 100% !important;
+        padding: 1rem !important;
+        box-sizing: border-box !important;
+    }
+
+    #main > .posts > article {
+        border-left: none !important;
+        border-top: none !important;
+    }
+
+    /* Main container padding */
+    #main > * {
+        padding: 1rem 1rem 0.5rem 1rem !important;
+    }
+
+    /* Remove fixed height and allow content to grow naturally */
+    #intro,
+    #main,
+    #header,
+    section,
+    footer {
+        min-height: auto !important;
+        height: auto !important;
+        padding-top: 1rem !important;
+        padding-bottom: 1rem !important;
+        position: relative !important;
+    }
+
+    /* Make all text wrap instead of overflowing */
+    * {
+        word-wrap: break-word !important;
+        overflow-wrap: break-word !important;
+    }
+}
+@media screen and (max-width: 736px) {
+  html, body {
+    height: auto !important;
+    min-height: 100vh !important;
+    overflow-y: scroll !important; /* Forces scrollbar */
+  }
+  .intro, main, .posts, section, article {
+    min-height: auto !important;
+    height: auto !important;
+    padding-top: 1rem !important;
+    padding-bottom: 3rem !important; /* Extra bottom space */
+    position: relative !important;
+  }
+  body {
+    padding-top: 0 !important; /* Removes any global top pad */
+  }
+}
+.scrollable-content {
+    height: 300px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    padding: 15px;
 }

@@ -11,6 +11,34 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="lensasset/css/main.css" />
 		<noscript><link rel="stylesheet" href="lensasset/css/noscript.css" /></noscript>
+		<style>
+			article p {
+				max-height: 400px;
+				overflow-y: auto;
+				border: 1px solid #ddd;
+				padding: 15px;
+				border-radius: 5px;
+			}
+			
+			/* Custom scrollbar styling */
+			article p::-webkit-scrollbar {
+				width: 8px;
+			}
+			
+			article p::-webkit-scrollbar-track {
+				background: #f1f1f1;
+				border-radius: 10px;
+			}
+			
+			article p::-webkit-scrollbar-thumb {
+				background: #888;
+				border-radius: 10px;
+			}
+			
+			article p::-webkit-scrollbar-thumb:hover {
+				background: #555;
+			}
+		</style>
 	</head>
 	<body>
 
@@ -30,6 +58,7 @@
      
 							<a class="thumbnail" href="https://upload.wikimedia.org/wikipedia/commons/b/bc/Perur_Pateeswarar_Temple.jpg?20141128060447" data-position="left center"><img src="https://upload.wikimedia.org/wikipedia/commons/b/bc/Perur_Pateeswarar_Temple.jpg?20141128060447" alt="" /></a>
 							<h2>PERUR PATEESWARAR</h2>
+							<div class="scrollable-content">
 							<p> HISTORY:<br>
                 The Perur Pateeswarar Temple, located in Coimbatore, was built in the 2nd century
 AD by King Karikala Chola. It is a 2,000-year-old temple dedicated to Lord Shiva, known as
@@ -67,6 +96,7 @@ MAP:<br> <a href="https://maps.app.goo.gl/757St4ma1WfbeamKA">view on google maps
 
  
 </p>
+</div>
 						</article>
 						<article>
           
